@@ -1,0 +1,42 @@
+// div {
+//   margin: 5px 0;
+// }
+.alert {
+  color:red;
+}
+input.ng-touched.ng-invalid {
+  border:solid red 2px;
+}
+input.ng-touched.ng-valid {
+  border:solid green 2px;
+}
+.showCookies{
+  background-color: var(--tui-status-positive);
+  padding: 6px;
+  cursor: pointer;
+  // width: 50px;
+  // height: 40px;
+  // border-left: 1px solid black;
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
+  // cursor: pointer;
+}
+// .cookiesProduct{
+//   width: 200px;
+//   margin-bottom: 5px;
+//   display: flex;
+//   background-color: var(--tui-status-positive);
+
+//   &:hover {
+//     background-color: var(--tui-status-positive-pale-hover);
+//   }
+// }
+tui-chip {
+  display: flex;
+}
+.cookiesProducts {
+  display: flex;
+  flex-wrap: wrap;
+  width: 500px;
+}

@@ -1,0 +1,59 @@
+<h1 tui-text_h1>Список продуктов и счетчик калорий</h1>
+
+<!-- <form [formGroup]="myForm" novalidate class="formMain"> -->
+<form novalidate class="formMain">
+  <div>
+      <label tui-text_body-xl>Название продукта</label><br>
+      <!-- <input name="foodName"   formControlName="foodName" /> -->
+
+      <input #foodName placeholder="Название" />
+
+      <!-- @if(myForm.controls["foodName"].invalid && myForm.controls["foodName"].touched){
+          <div class="alert">Название продукта не указано</div>
+      } -->
+  </div>
+  <div>
+      <label tui-text_body-m>Калорийность продукта</label><br>
+      <!-- <input name="foodCalories" formControlName="foodCalories" /> -->
+
+      <input #foodCalories placeholder="Калорий" />
+
+      <!-- @if(myForm.controls["foodCalories"].invalid && myForm.controls["foodCalories"].touched){
+          <div class="alert">Калорийность продукта не указана</div>
+      } -->
+  </div>
+
+  <!-- <button [disabled]="myForm.invalid" (click)="addProduct()">Добавить</button> -->
+
+  <button (click)="addFood(foodName.value, foodCalories.value)">
+    Добавить
+  </button>
+</form>
+<div>
+  <h3>Добавленные элементы</h3>
+  <!-- <div class="cookiesProducts">
+  @for(product of productsList; track $index){
+    <div class="cookiesProduct">
+      <div>{{product.foodName}}</div>
+      <div>{{product.foodCalories}}</div>
+    </div>
+  }
+  </div> -->
+  <div>
+    <p>Ранее добавленные вами продукты, загруженные из cookies браузера</p>
+    <div class="cookiesProducts">
+      <!-- @for(cookieValue of cookiesList; track $index) {
+        <tui-chip appearance="primary">
+          <div>{{cookieValue.foodNameCookie}}</div>
+          <div class='showCookies'>{{cookieValue.foodCaloriesCookie}} ккал</div>
+        </tui-chip> -->
+      <!-- <div class="cookiesProduct">
+      </div> -->
+
+      @for(item of foodItems; track $index) {
+        <p>Название: {{ item.name }}</p>
+        <p>Калорий: {{ item.calories }}</p>
+      }
+    </div>
+  </div>
+</div>
