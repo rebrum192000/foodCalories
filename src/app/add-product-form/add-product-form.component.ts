@@ -2,7 +2,6 @@ import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { FormsModule, FormGroup, FormControl, Validators, ReactiveFormsModule} from "@angular/forms";
 import { CookieService } from 'ngx-cookie-service';
 import { BehaviorSubject } from 'rxjs';
-import {TuiChip} from '@taiga-ui/kit';
 import { CookiesHandlerService } from '../services/cookies-handler.service';
 
 class ProductsList{
@@ -15,7 +14,7 @@ class CookiesList{
 @Component({
     selector: 'app-add-product-form',
     standalone: true,
-    imports: [FormsModule, ReactiveFormsModule, TuiChip],
+    imports: [FormsModule, ReactiveFormsModule],
     providers: [CookieService],
     templateUrl: './add-product-form.component.html',
     styleUrl: './add-product-form.component.scss',
